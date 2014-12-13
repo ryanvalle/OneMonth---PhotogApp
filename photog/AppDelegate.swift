@@ -15,8 +15,50 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        self.setupParse()
+        self.setupAppAppearance()
+        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+
+        // Create instance of UI Navigation controller
+        // Allows to move back and forth between UIViewControllers
+        var navigationController = UINavigationController()
+        var startViewController = StartViewController(nibName:"StartViewController", bundle: nil) // nibName references the .xib file; bundle determines the directory location for the xib...nil for global directory
+        // comment out to allow navigation bar to hide in StartViewController.swift
+        //startViewController.view.backgroundColor = UIColor.yellowColor()
+        
+        if PFUser.currentUser() == nil {
+            navigationController.viewControllers = [startViewController]
+        } else {
+            println("user is logged in")
+        }
+        
+        self.window!.rootViewController = navigationController
+        self.window!.makeKeyAndVisible()
+        
         return true
+    }
+    
+    func setupParse() {
+        Parse.setApplicationId("cjxLCGFpwdpJOj1n7RgVJbOr6VpOV5M7BXLUSAfM", clientKey:"rmjebFZl0TYsok3EeAGG3nLnRZcM8i00a4hc5WOE")
+// COMMENTING OUT TEST, NOT NEEDED ON EACH RUNTIME
+//        var testObject = PFObject(className: "TestObject")
+//        testObject["foo"] = "bar"
+//        testObject.save()
+    }
+    
+    func setupAppAppearance() {
+        // Set clock and top menu bar to white text
+        UIApplication.sharedApplication().statusBarStyle = .LightContent
+        
+        // Styles navigation bar
+        UINavigationBar.appearance().barTintColor = UIColor.blackColor()
+        UINavigationBar.appearance().tintColor = UIColor.whiteColor()
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.whiteColor()]
+        UITabBar.appearance().barTintColor = UIColor.blackColor()
+        UITabBar.appearance().tintColor = UIColor.whiteColor()
+        UITabBar.appearance().selectionIndicatorImage = UIImage(named: "SelectedTabBackground")
+
     }
 
     func applicationWillResignActive(application: UIApplication) {
