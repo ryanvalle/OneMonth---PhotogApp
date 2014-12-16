@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>C9E18C48-95D5-4B29-95DF-00ECAA611F96</string>
+	<key>IDESourceControlProjectName</key>
+	<string>photog</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>59ED77D11B799A496D4B0E79DB9AB48D3E675DA1</key>
+		<string>https://github.com/ryanvalle/OneMonth---PhotogApp.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>photog.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>59ED77D11B799A496D4B0E79DB9AB48D3E675DA1</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/ryanvalle/OneMonth---PhotogApp.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>59ED77D11B799A496D4B0E79DB9AB48D3E675DA1</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>59ED77D11B799A496D4B0E79DB9AB48D3E675DA1</string>
+			<key>IDESourceControlWCCName</key>
+			<string>photog</string>
+		</dict>
+	</array>
+</dict>
+</plist>

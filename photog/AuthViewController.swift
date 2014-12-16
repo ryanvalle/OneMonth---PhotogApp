@@ -8,8 +8,14 @@
 
 import UIKit
 
+enum AuthMode {
+    case SignIn
+    case SignUp
+}
+
 class AuthViewController: UIViewController, UITextFieldDelegate {
 
+    var authmode: AuthMode = AuthMode.SignUp
     @IBOutlet var emailTextField: UITextField?
     @IBOutlet var passwordTextField: UITextField?
     
@@ -30,6 +36,12 @@ class AuthViewController: UIViewController, UITextFieldDelegate {
         
         self.passwordTextField!.leftView = passwordImageView
         self.passwordTextField!.leftViewMode = .Always
+        
+        if authmode == .SignIn {
+            self.navigationItem.title = "Sign In"
+        } else {
+            self.navigationItem.title = "Sign Up"
+        }
     }
 
     override func viewWillAppear(animated: Bool) {
@@ -65,6 +77,50 @@ class AuthViewController: UIViewController, UITextFieldDelegate {
         var email = self.emailTextField?.text
         var password = self.passwordTextField?.text
         
+        if (email?.isEmpty == true || password?.isEmpty == true || email?.isEmailAddress() == false) {
+            self.showAlert("Check E-Mail and Password")
+            return
+        }
+        
+        if authmode == .SignIn {
+            self.signIn(email!, password: password!)
+        } else {
+            self.signUp(email!, password: password!);
+        }
+    }
+    
+    func signIn(email: String, password: String) {
+        PFUser.logInWithUsernameInBackground(email, password: password) {
+            (user: PFUser!, error: NSError!) -> Void in
+            
+            if (user != nil) {
+                self.loadTabViewController()
+            } else {
+                self.showAlert("Failed to sign in. Check e-mail address and password!")
+            }
+        }
+    }
+    
+    func signUp(email: String, password: String) {
+        var user = PFUser()
+        user.username = email
+        user.email = email
+        user.password = password
+        
+        user.signUpInBackgroundWithBlock {
+            (succeeded: Bool!, error: NSError!) -> Void in
+            
+            if error == nil {
+                self.loadTabViewController()
+            } else {
+                self.showAlert("Failed to sign up.")
+            }
+        }
+    }
+    
+    func loadTabViewController() {
+        var tabViewController = TabBarController()
+        self.navigationController?.pushViewController(tabViewController, animated: true)
     }
     
 }

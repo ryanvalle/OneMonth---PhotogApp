@@ -20,17 +20,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.setupAppAppearance()
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
 
-        // Create instance of UI Navigation controller
-        // Allows to move back and forth between UIViewControllers
         var navigationController = UINavigationController()
-        var startViewController = StartViewController(nibName:"StartViewController", bundle: nil) // nibName references the .xib file; bundle determines the directory location for the xib...nil for global directory
-        // comment out to allow navigation bar to hide in StartViewController.swift
-        //startViewController.view.backgroundColor = UIColor.yellowColor()
+        var startViewController = StartViewController(nibName:"StartViewController", bundle: nil)
+        
+
         
         if PFUser.currentUser() == nil {
             navigationController.viewControllers = [startViewController]
         } else {
-            println("user is logged in")
+            var tabViewController = TabBarController()
+            navigationController.viewControllers = [startViewController, tabViewController]
         }
         
         self.window!.rootViewController = navigationController
@@ -48,16 +47,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func setupAppAppearance() {
-        // Set clock and top menu bar to white text
         UIApplication.sharedApplication().statusBarStyle = .LightContent
         
-        // Styles navigation bar
         UINavigationBar.appearance().barTintColor = UIColor.blackColor()
         UINavigationBar.appearance().tintColor = UIColor.whiteColor()
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.whiteColor()]
+        
         UITabBar.appearance().barTintColor = UIColor.blackColor()
         UITabBar.appearance().tintColor = UIColor.whiteColor()
         UITabBar.appearance().selectionIndicatorImage = UIImage(named: "SelectedTabBackground")
+        UITabBar.appearance().selectedImageTintColor = UIColor.yellowColor()
 
     }
 
