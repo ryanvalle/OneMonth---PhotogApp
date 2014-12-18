@@ -111,7 +111,14 @@ class AuthViewController: UIViewController, UITextFieldDelegate {
             (succeeded: Bool!, error: NSError!) -> Void in
             
             if error == nil {
-                self.loadTabViewController()
+                NetworkManager.sharedInstance.follow(user, completionHandler: {
+                    (error) -> Void in
+                    if error == nil {
+                        self.loadTabViewController()
+                    } else {
+                        println("unable for user to follow themselves")
+                    }
+                })
             } else {
                 self.showAlert("Failed to sign up.")
             }

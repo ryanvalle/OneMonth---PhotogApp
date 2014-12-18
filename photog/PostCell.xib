@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="PostCell" customModule="photog" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="381"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gCj-AB-XW3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="30"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4OV-uQ-2C6">
+                                <rect key="frame" x="10" y="4" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dni-Ww-XpD">
+                                <rect key="frame" x="268" y="4.5" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.2871370956" green="0.81772006009999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="4OV-uQ-2C6" secondAttribute="centerY" id="ARC-oW-kFM"/>
+                            <constraint firstItem="4OV-uQ-2C6" firstAttribute="leading" secondItem="gCj-AB-XW3" secondAttribute="leading" constant="10" id="RDA-wU-qTf"/>
+                            <constraint firstAttribute="height" constant="30" id="byD-xr-lhy"/>
+                            <constraint firstAttribute="trailing" secondItem="dni-Ww-XpD" secondAttribute="trailing" constant="10" id="i3H-cM-fid"/>
+                            <constraint firstAttribute="centerY" secondItem="dni-Ww-XpD" secondAttribute="centerY" id="zk8-fO-F4b"/>
+                        </constraints>
+                    </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qhe-hY-u4b">
+                        <rect key="frame" x="10" y="40" width="300" height="300"/>
+                        <color key="backgroundColor" red="0.2871370956" green="0.81772006009999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="300" id="muH-dy-QwD"/>
+                            <constraint firstAttribute="width" constant="300" id="x2a-15-LxY"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="gCj-AB-XW3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="1CI-l3-8FI"/>
+                    <constraint firstItem="gCj-AB-XW3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Hvi-wU-4Id"/>
+                    <constraint firstAttribute="trailing" secondItem="gCj-AB-XW3" secondAttribute="trailing" id="K5e-1v-GRS"/>
+                    <constraint firstAttribute="bottom" secondItem="qhe-hY-u4b" secondAttribute="bottom" constant="40" id="kON-Ud-RM5"/>
+                    <constraint firstAttribute="trailing" secondItem="qhe-hY-u4b" secondAttribute="trailing" constant="10" id="qZO-Gr-Mu5"/>
+                    <constraint firstItem="qhe-hY-u4b" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="vgf-0t-Qtk"/>
+                    <constraint firstItem="qhe-hY-u4b" firstAttribute="top" secondItem="gCj-AB-XW3" secondAttribute="bottom" constant="10" id="x4L-WQ-jbC"/>
+                    <constraint firstAttribute="bottom" secondItem="qhe-hY-u4b" secondAttribute="bottom" priority="750" constant="40" id="xxD-bm-SeA"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="kON-Ud-RM5"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+        </tableViewCell>
+    </objects>
+</document>
