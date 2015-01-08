@@ -8,6 +8,8 @@
 
 import Foundation
 
+typealias ObjectCompetionHandler = (objects: [AnyObject]?, error: NSError?) -> ()
+
 public class NetworkManager {
     public class var sharedInstance: NetworkManager {
         struct Singleton {
@@ -25,7 +27,38 @@ public class NetworkManager {
         }
     }
     
-    func fetchFeed(completionHandler: (objects: [AnyObject?], error: NSError?) -> ()) {
-        
+    func fetchFeed(completionHandler: ObjectCompetionHandler!) {
+        var relation = PFUser.currentUser().relationForKey("following")
+        var query = relation.query()
+        query.findObjectsInBackgroundWithBlock {
+            (objects: [AnyObject]!, error: NSError!) -> Void in
+            
+            if (error != nil)
+            {
+                println("error fetching following")
+                completionHandler(objects: nil, error: error)
+            }
+            else
+            {
+                println("success fetching following: \(objects)")
+                var postQuery = PFQuery(className: "Post")
+                postQuery.whereKey("User", containedIn: objects)
+                postQuery.orderByDescending("createdAt")
+                postQuery.findObjectsInBackgroundWithBlock {
+                    (objects: [AnyObject]!, error: NSError!) -> Void in
+                    if (error != nil)
+                    {
+                        println("error fetching feed posts)")
+                        completionHandler(objects: nil, error: error)
+                    }
+                    else
+                    {
+                        println("Success fetching feed posts \(objects)!")
+                        completionHandler(objects: objects, error: nil)
+                    }
+                }
+                
+            }
+        }
     }
 }

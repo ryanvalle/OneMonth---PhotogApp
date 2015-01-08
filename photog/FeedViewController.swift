@@ -12,7 +12,7 @@ class FeedViewController: UIViewController,UITableViewDataSource {
 
     @IBOutlet var tableView: UITableView?
     
-    var items = ["","","",""]
+    var items = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +28,12 @@ class FeedViewController: UIViewController,UITableViewDataSource {
         NetworkManager.sharedInstance.fetchFeed {
             (objects, error) -> () in
             println(objects)
-            println(error)
+            if let constObjects = objects {
+                self.items = constObjects
+                self.tableView?.reloadData()
+            } else if let constError = error {
+                // alert user of error
+            }
         }
     }
 
@@ -44,8 +49,8 @@ class FeedViewController: UIViewController,UITableViewDataSource {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("PostCellController") as PostCell
         
-//        var item = items[indexPath.row] as PFObject
-//        cell.item = item
+        var item = items[indexPath.row] as PFObject
+        cell.post = item
         
         return cell
     }

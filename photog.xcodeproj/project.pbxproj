@@ -35,6 +35,7 @@
 		5B3828BD1A4156EB0098E727 /* FeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B3828BB1A4156EB0098E727 /* FeedViewController.xib */; };
 		5B3828C01A415AE80098E727 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3828BE1A415AE80098E727 /* PostCell.swift */; };
 		5B3828C11A415AE80098E727 /* PostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B3828BF1A415AE80098E727 /* PostCell.xib */; };
+		5B64D4A91A5E527300FCD110 /* NSDate+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B64D4A81A5E527300FCD110 /* NSDate+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		5B3828BB1A4156EB0098E727 /* FeedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedViewController.xib; sourceTree = "<group>"; };
 		5B3828BE1A415AE80098E727 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		5B3828BF1A415AE80098E727 /* PostCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostCell.xib; sourceTree = "<group>"; };
+		5B64D4A81A5E527300FCD110 /* NSDate+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +214,7 @@
 			children = (
 				5B3828B21A3D4F5D0098E727 /* String+Extensions.swift */,
 				5B3828B41A3D6AA50098E727 /* UIViewController+Extensions.swift */,
+				5B64D4A81A5E527300FCD110 /* NSDate+Extensions.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B64D4A91A5E527300FCD110 /* NSDate+Extensions.swift in Sources */,
 				5B3828B31A3D4F5D0098E727 /* String+Extensions.swift in Sources */,
 				5B31D0761A30351700B47D49 /* AppDelegate.swift in Sources */,
 				5B3828B51A3D6AA50098E727 /* UIViewController+Extensions.swift in Sources */,
