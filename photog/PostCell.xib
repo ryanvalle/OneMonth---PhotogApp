@@ -16,20 +16,20 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gCj-AB-XW3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="30"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4OV-uQ-2C6">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="User Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4OV-uQ-2C6">
                                 <rect key="frame" x="10" y="4" width="42" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dni-Ww-XpD">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Date Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dni-Ww-XpD">
                                 <rect key="frame" x="270" y="4" width="42" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.38623046875" green="0.38623046875" blue="0.38623046875" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.2871370956" green="0.81772006009999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerY" secondItem="4OV-uQ-2C6" secondAttribute="centerY" id="ARC-oW-kFM"/>
                             <constraint firstItem="4OV-uQ-2C6" firstAttribute="leading" secondItem="gCj-AB-XW3" secondAttribute="leading" constant="10" id="RDA-wU-qTf"/>
@@ -38,9 +38,10 @@
                             <constraint firstAttribute="centerY" secondItem="dni-Ww-XpD" secondAttribute="centerY" id="zk8-fO-F4b"/>
                         </constraints>
                     </view>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qhe-hY-u4b">
-                        <rect key="frame" x="10" y="40" width="300" height="300"/>
-                        <color key="backgroundColor" red="0.2871370956" green="0.81772006009999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="PostPlaceholderImage" translatesAutoresizingMaskIntoConstraints="NO" id="qhe-hY-u4b">
+                        <rect key="frame" x="9" y="40" width="300" height="300"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="300" id="muH-dy-QwD"/>
                             <constraint firstAttribute="width" constant="300" id="x2a-15-LxY"/>
@@ -70,4 +71,7 @@
             </connections>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="PostPlaceholderImage" width="300" height="304"/>
+    </resources>
 </document>

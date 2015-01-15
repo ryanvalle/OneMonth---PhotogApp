@@ -19,6 +19,8 @@ class FeedViewController: UIViewController,UITableViewDataSource {
 
         var nib = UINib(nibName: "PostCell", bundle: nil)
         tableView?.registerNib(nib, forCellReuseIdentifier: "PostCellController")
+        tableView?.separatorStyle = UITableViewCellSeparatorStyle.None
+        
         
     }
     
@@ -27,7 +29,6 @@ class FeedViewController: UIViewController,UITableViewDataSource {
         
         NetworkManager.sharedInstance.fetchFeed {
             (objects, error) -> () in
-            println(objects)
             if let constObjects = objects {
                 self.items = constObjects
                 self.tableView?.reloadData()

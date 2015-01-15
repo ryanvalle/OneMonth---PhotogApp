@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B1EF6EB1A64EF5D00EA539F /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1EF6E91A64EF5D00EA539F /* SearchViewController.swift */; };
+		5B1EF6EC1A64EF5D00EA539F /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B1EF6EA1A64EF5D00EA539F /* SearchViewController.xib */; };
 		5B31D0761A30351700B47D49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B31D0751A30351700B47D49 /* AppDelegate.swift */; };
 		5B31D07D1A30351700B47D49 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B31D07C1A30351700B47D49 /* Images.xcassets */; };
 		5B31D0801A30351700B47D49 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B31D07E1A30351700B47D49 /* LaunchScreen.xib */; };
@@ -36,6 +38,7 @@
 		5B3828C01A415AE80098E727 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3828BE1A415AE80098E727 /* PostCell.swift */; };
 		5B3828C11A415AE80098E727 /* PostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B3828BF1A415AE80098E727 /* PostCell.xib */; };
 		5B64D4A91A5E527300FCD110 /* NSDate+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B64D4A81A5E527300FCD110 /* NSDate+Extensions.swift */; };
+		5B92AB801A5FAB6400A9C68F /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B92AB7F1A5FAB6400A9C68F /* UIColor+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5B1EF6E91A64EF5D00EA539F /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		5B1EF6EA1A64EF5D00EA539F /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
 		5B31D0701A30351700B47D49 /* photog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = photog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B31D0741A30351700B47D49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B31D0751A30351700B47D49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +88,7 @@
 		5B3828BE1A415AE80098E727 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		5B3828BF1A415AE80098E727 /* PostCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostCell.xib; sourceTree = "<group>"; };
 		5B64D4A81A5E527300FCD110 /* NSDate+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Extensions.swift"; sourceTree = "<group>"; };
+		5B92AB7F1A5FAB6400A9C68F /* UIColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,8 +206,10 @@
 				5B3828AC1A39720D0098E727 /* AuthViewController.swift */,
 				5B31D0B21A32E9B100B47D49 /* StartViewController.xib */,
 				5B3828AD1A39720D0098E727 /* AuthViewController.xib */,
-				5B3828B61A3E9D4A0098E727 /* TabBarController.swift */,
 				5B3828BA1A4156EB0098E727 /* FeedViewController.swift */,
+				5B1EF6E91A64EF5D00EA539F /* SearchViewController.swift */,
+				5B1EF6EA1A64EF5D00EA539F /* SearchViewController.xib */,
+				5B3828B61A3E9D4A0098E727 /* TabBarController.swift */,
 				5B3828BB1A4156EB0098E727 /* FeedViewController.xib */,
 				5B3828BE1A415AE80098E727 /* PostCell.swift */,
 				5B3828BF1A415AE80098E727 /* PostCell.xib */,
@@ -215,6 +223,7 @@
 				5B3828B21A3D4F5D0098E727 /* String+Extensions.swift */,
 				5B3828B41A3D6AA50098E727 /* UIViewController+Extensions.swift */,
 				5B64D4A81A5E527300FCD110 /* NSDate+Extensions.swift */,
+				5B92AB7F1A5FAB6400A9C68F /* UIColor+Extensions.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -305,6 +314,7 @@
 				5B31D0801A30351700B47D49 /* LaunchScreen.xib in Resources */,
 				5B31D07D1A30351700B47D49 /* Images.xcassets in Resources */,
 				5B31D0B41A32E9B100B47D49 /* StartViewController.xib in Resources */,
+				5B1EF6EC1A64EF5D00EA539F /* SearchViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,8 +338,10 @@
 				5B3828B51A3D6AA50098E727 /* UIViewController+Extensions.swift in Sources */,
 				5B3828B91A4155330098E727 /* NetworkManager.swift in Sources */,
 				5B3828B71A3E9D4A0098E727 /* TabBarController.swift in Sources */,
+				5B1EF6EB1A64EF5D00EA539F /* SearchViewController.swift in Sources */,
 				5B3828C01A415AE80098E727 /* PostCell.swift in Sources */,
 				5B3828AE1A39720D0098E727 /* AuthViewController.swift in Sources */,
+				5B92AB801A5FAB6400A9C68F /* UIColor+Extensions.swift in Sources */,
 				5B3828BC1A4156EB0098E727 /* FeedViewController.swift in Sources */,
 				5B31D0B31A32E9B100B47D49 /* StartViewController.swift in Sources */,
 			);
